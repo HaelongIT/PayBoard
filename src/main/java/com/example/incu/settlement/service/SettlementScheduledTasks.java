@@ -40,7 +40,7 @@ public class SettlementScheduledTasks {
         this.jdbcTemplate = jdbcTemplate;
     }
 
-//    @Scheduled(cron = "0 * * * * ?")
+    @Scheduled(cron = "0 * * * * ?")
     @SchedulerLock(name = "ScheduledTask_run")
     public void dailySettlement() {
         // 어제의 날짜를 가져옴
